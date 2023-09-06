@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 import data from "./data-nested.json";
 
@@ -5,13 +6,16 @@ interface Item {
   id: string;
   fileName: string;
   children: any[];
+  collapsed?: boolean;
 }
 
 const Wrapper = ({ children }: any) => {
-  return <ul>{children}</ul>;
+  return <ul>{ children}</ul>;
 };
 
-const Item = ({ fileName, children }: Item) => {
+const Item = ({ fileName, collapsed, children }: Item) => {
+  const [visible, setVisible] = useState(!collapsed);
+
   let style = "";
   if (fileName.indexOf(".server.ts") !== -1) {
     style = "server";
@@ -22,8 +26,15 @@ const Item = ({ fileName, children }: Item) => {
   }
   return (
     <li>
-      <span className={style}>{fileName}</span>
-      {children && (
+      <span
+        className={style}
+        onClick={() => {
+          setVisible(!visible);
+        }}
+      >
+        {fileName}
+      </span>
+      {(children && visible) && (
         <Wrapper>
           {children.map((el: any) => {
             return <Item key={el.id} {...el} />;
