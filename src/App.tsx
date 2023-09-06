@@ -11,10 +11,18 @@ const Wrapper = ({ children }: any) => {
   return <ul>{children}</ul>;
 };
 
-const Item = ({ id, fileName, children }: Item) => {
+const Item = ({ fileName, children }: Item) => {
+  let style = "";
+  if (fileName.indexOf(".server.ts") !== -1) {
+    style = "server";
+  } else if (fileName.indexOf(".client.ts") !== -1) {
+    style = "client";
+  } else {
+    style = "folder";
+  }
   return (
     <li>
-      {fileName}
+      <span className={style}>{fileName}</span>
       {children && (
         <Wrapper>
           {children.map((el: any) => {
