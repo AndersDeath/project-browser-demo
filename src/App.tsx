@@ -29,7 +29,9 @@ const Item = ({ fileName, collapsed, children }: Item) => {
       <span
         className={style}
         onClick={() => {
-          setVisible(!visible);
+          if(children) {
+            setVisible(!visible);
+          }
         }}
       >
         {fileName}
