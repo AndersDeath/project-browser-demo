@@ -1,63 +1,73 @@
 {
-    "id": "1",
-    "fileName": "root",
-    "children": [
-      {
-        "id": "2",
-        "fileName": "app",
-        "children": [
-          {
-            "id": "4",
-            "fileName": "user",
-            "children": [
-              {
-                "id": "7",
-                "fileName": "balance.client.tsx",
-                "children": null
-              }
-            ]
-          },
-          {
-            "id": "5",
-            "fileName": "balance",
-            "children": [
-              {
-                "id": "8",
-                "fileName": "operations.server.tsx",
-                "children": null
-              },
-              {
-                "id": "9",
-                "fileName": "overview.client.tsx",
-                "children": null
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "3",
-        "fileName": "header",
-        "children": [
-          {
-            "id": "6",
-            "fileName": "user",
-            "children": [
-              {
-                "id": "10",
-                "fileName": "overview",
-                "children": [
-                  {
-                    "id": "11",
-                    "fileName": "balance.client.tsx",
-                    "children": null
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  }
-  
+  "id": "1",
+  "fileName": "root",
+  "minimized": false,
+  "children": [
+    {
+      "id": "2",
+      "fileName": "app",
+      "minimized": false,
+      "children": [
+        {
+          "id": "4",
+          "fileName": "user",
+          "minimized": false,
+          "children": [
+            {
+              "id": "7",
+              "fileName": "balance.client.tsx",
+              "minimized": false,
+              "children": null
+            }
+          ]
+        },
+        {
+          "id": "5",
+          "fileName": "balance",
+          "minimized": false,
+          "children": [
+            {
+              "id": "8",
+              "fileName": "operations.server.tsx",
+              "minimized": false,
+              "children": null
+            },
+            {
+              "id": "9",
+              "fileName": "overview.client.tsx",
+              "minimized": false,
+              "children": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "fileName": "header",
+      "minimized": false,
+      "children": [
+        {
+          "id": "6",
+          "fileName": "user",
+          "minimized": false,
+          "children": [
+            {
+              "id": "10",
+              "fileName": "overview",
+              "minimized": false,
+              "children": [
+                {
+                  "id": "11",
+                  "fileName": "balance.client.tsx",
+                  "minimized": false,
+                  "children": null
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

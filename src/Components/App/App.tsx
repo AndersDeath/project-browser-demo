@@ -6,16 +6,15 @@ interface Item {
   id: string;
   fileName: string;
   children: any[];
-  collapsed?: boolean;
+  minimized?: boolean;
 }
 
 const Wrapper = ({ children }: any) => {
-  return <ul>{ children}</ul>;
+  return <ul>{children}</ul>;
 };
 
-const Item = ({ fileName, collapsed, children }: Item) => {
-  const [visible, setVisible] = useState(!collapsed);
-
+const Item = ({ fileName, minimized, children }: Item) => {
+  const [visible, setVisible] = useState(!minimized);
   let style = "";
   if (fileName.indexOf(".server.ts") !== -1) {
     style = "server";
@@ -26,18 +25,18 @@ const Item = ({ fileName, collapsed, children }: Item) => {
   }
   return (
     <li>
-      {style === 'folder' ? (visible ? '+' : '-') : '' }
+      {style === "folder" ? (visible ? "+" : "-") : ""}
       <span
         className={style}
         onClick={() => {
-          if(children) {
+          if (children) {
             setVisible(!visible);
           }
         }}
       >
         {fileName}
       </span>
-      {(children && visible) && (
+      {children && visible && (
         <Wrapper>
           {children.map((el: any) => {
             return <Item key={el.id} {...el} />;
