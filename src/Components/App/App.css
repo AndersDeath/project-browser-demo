@@ -1,5 +1,9 @@
+.App {
+  background: #222;
+  color: #eee;
+}
 .App ul {
-  padding-left: 30px;
+  padding-left: 15px;
 }
 
 .App li {
@@ -12,9 +16,9 @@
 }
 
 .App .client {
-  color: darkblue;
+  color: lightcyan;
 }
 
 .App .server {
-  color: darkred;
+  color: #cfc;
 }
