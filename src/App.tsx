@@ -26,6 +26,7 @@ const Item = ({ fileName, collapsed, children }: Item) => {
   }
   return (
     <li>
+      {style === 'folder' ? (visible ? '+' : '-') : '' }
       <span
         className={style}
         onClick={() => {
