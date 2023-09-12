@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-import data from "./data-nested.json";
+import data from "../../Data/folders.json";
 
 interface Item {
   id: string;
