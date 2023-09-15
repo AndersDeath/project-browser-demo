@@ -1,24 +1,21 @@
 .App {
   background: #222;
   color: #eee;
-}
-.App ul {
-  padding-left: 15px;
-}
 
-.App li {
-  list-style: none;
-  cursor: pointer;
-}
-
-.App .folder {
-  text-decoration: underline;
-}
-
-.App .client {
-  color: lightcyan;
-}
-
-.App .server {
-  color: #cfc;
+  ul {
+    padding-left: 15px;
+  }
+  li {
+    list-style: none;
+    cursor: pointer;
+  }
+  .folder {
+    text-decoration: underline;
+  }
+  .client {
+    color: lightcyan;
+  }
+  .server {
+    color: #cfc;
+  }
 }
