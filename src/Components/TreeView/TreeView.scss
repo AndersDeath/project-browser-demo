@@ -1,6 +1,9 @@
 .TreeView {
     background: #222;
     color: #eee;
+
+    min-width: 230px;
+    border-right: 1px solid #ccc;
   
     ul {
       padding-left: 15px;
