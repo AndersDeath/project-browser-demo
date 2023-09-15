@@ -1,0 +1,22 @@
+.TreeView {
+    background: #222;
+    color: #eee;
+  
+    ul {
+      padding-left: 15px;
+    }
+    li {
+      list-style: none;
+      cursor: pointer;
+    }
+    .folder {
+      text-decoration: underline;
+    }
+    .client {
+      color: lightcyan;
+    }
+    .server {
+      color: #cfc;
+    }
+  }
+  

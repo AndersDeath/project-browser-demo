@@ -49,7 +49,7 @@ const Item = ({ fileName, minimized, children }: Item) => {
 
 export default function TreeView() {
   return (
-    <div className="App">
+    <div className="TreeView">
       <Wrapper>
         <Item key={data.id} {...data} />
       </Wrapper>
