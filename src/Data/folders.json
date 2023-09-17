@@ -1,73 +1,76 @@
 {
   "id": "1",
-  "fileName": "root",
+  "fileName": "DemoApp",
   "minimized": false,
   "children": [
     {
       "id": "2",
-      "fileName": "app",
+      "fileName": "App",
       "minimized": false,
       "children": [
         {
-          "id": "4",
-          "fileName": "user",
+          "id": "2",
+          "fileName": "Components",
           "minimized": false,
           "children": [
             {
-              "id": "7",
-              "fileName": "balance.client.tsx",
+              "id": "3",
+              "fileName": "App.tsx",
+              "minimized": false,
+              "children": null
+            },
+            {
+              "id": "5",
+              "fileName": "App.scss",
               "minimized": false,
               "children": null
             }
           ]
         },
         {
-          "id": "5",
-          "fileName": "balance",
+          "id": "6",
+          "fileName": "Pages",
           "minimized": false,
           "children": [
             {
-              "id": "8",
-              "fileName": "operations.server.tsx",
+              "id": "7",
+              "fileName": "Main.page.tsx",
               "minimized": false,
               "children": null
             },
             {
-              "id": "9",
-              "fileName": "overview.client.tsx",
+              "id": "8",
+              "fileName": "Main.page.scss",
               "minimized": false,
               "children": null
             }
           ]
+        },
+        {
+          "id": "9",
+          "fileName": "index.tsx",
+          "minimized": false,
+          "children": []
+        },
+        {
+          "id": "10",
+          "fileName": "test.js",
+          "minimized": false,
+          "children": []
         }
       ]
     },
     {
-      "id": "3",
-      "fileName": "header",
+      "id": "11",
+      "fileName": "package.json",
       "minimized": false,
-      "children": [
-        {
-          "id": "6",
-          "fileName": "user",
-          "minimized": false,
-          "children": [
-            {
-              "id": "10",
-              "fileName": "overview",
-              "minimized": false,
-              "children": [
-                {
-                  "id": "11",
-                  "fileName": "balance.client.tsx",
-                  "minimized": false,
-                  "children": null
-                }
-              ]
-            }
-          ]
-        }
-      ]
+      "children": []
+    },
+    {
+      "id": "12",
+      "fileName": "README.MD",
+      "minimized": false,
+      "children": []
     }
   ]
 }
