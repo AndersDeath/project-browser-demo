@@ -16,7 +16,7 @@
     margin: 4px 0 4px 0;
   }
   .folder {
-    text-decoration: underline;
+    margin-left: 3px;
   }
   .typescript::before {
     content: "";
@@ -70,5 +70,12 @@
     height: 14px;
     float: left;
     margin-right: 5px;
+  }
+
+  .folder-arrow {
+    display: inline-block;
+    &.down {
+      rotate: 90deg;
+    }
   }
 }

@@ -34,7 +34,15 @@ const Item = ({ fileName, minimized, children }: Item) => {
   }
   return (
     <li>
-      {style === "folder" ? (visible ? ">" : "-") : ""}
+      {style === "folder" ? (
+        visible ? (
+          <span className="folder-arrow down">{">"}</span>
+        ) : (
+          <span className="folder-arrow">{">"}</span>
+        )
+      ) : (
+        ""
+      )}
       <span
         className={style}
         onClick={() => {
