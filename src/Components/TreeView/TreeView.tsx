@@ -1,6 +1,10 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import "./TreeView.scss";
 import data from "../../Data/folders.json";
+import { FilesData, files } from "../../Data/files";
+import { FileContext, useFileContext } from "../../FileContext";
+
+const Files = new FilesData(files);
 
 interface Item {
   id: string;
@@ -15,6 +19,8 @@ const Wrapper = ({ children }: any) => {
 
 const Item = ({ id, fileName, minimized, children }: Item) => {
   const [visible, setVisible] = useState(!minimized);
+  const { file, setFile } = useFileContext();
+
   let style = "item ";
   if (fileName.toLowerCase().indexOf(".ts") !== -1) {
     style += "typescript";
@@ -26,15 +32,15 @@ const Item = ({ id, fileName, minimized, children }: Item) => {
   } else if (fileName.toLowerCase().indexOf(".js") !== -1) {
     style += "javascript";
   } else if (fileName.toLowerCase().indexOf(".json") !== -1) {
-    style +="json";
+    style += "json";
   } else if (fileName.toLowerCase().indexOf(".md") !== -1) {
-    style +="markdown";
+    style += "markdown";
   } else {
     style += "folder";
   }
   return (
     <li>
-      {style.indexOf('folder') !== -1 ? (
+      {style.indexOf("folder") !== -1 ? (
         visible ? (
           <span className="folder-arrow down">{">"}</span>
         ) : (
@@ -46,7 +52,11 @@ const Item = ({ id, fileName, minimized, children }: Item) => {
       <span
         className={style}
         onClick={() => {
-          console.log(fileName, id);
+          console.log(Files.get(id));
+          const file = Files.get(id);
+          if (file) {
+            setFile(file);
+          }
           if (children) {
             setVisible(!visible);
           }

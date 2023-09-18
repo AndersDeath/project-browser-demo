@@ -1,6 +1,22 @@
+export class FilesData {
+  private files: any[] = [];
+  constructor(files: any[]) {
+    this.files = files;
+  }
+
+  get(id: string) {
+    return (
+      this.files.filter((e) => {
+        return e.id === id;
+      })[0] || false
+    );
+  }
+}
+
 export const files = [
   {
     title: "index.tsx",
+    id: "9",
     content: `import React from 'react';
         import ReactDOM from 'react-dom/client';
         import './index.scss';
