@@ -15,9 +15,18 @@
     font-size: 14px;
     margin: 4px 0 4px 0;
   }
-  .folder {
-    margin-left: 3px;
+
+  .item {
+    padding: 3px 5px 3px 5px;
+    transition: .2s;
   }
+
+  .item:hover {
+    text-decoration: underline;
+  }
+
+
+
   .typescript::before {
     content: "";
     display: block;
@@ -26,7 +35,6 @@
     width: 14px;
     height: 14px;
     float: left;
-    margin-right: 5px;
   }
 
   .sass::before {
@@ -37,7 +45,7 @@
     width: 14px;
     height: 14px;
     float: left;
-    margin-right: 5px;
+  
   }
   .json::before {
     content: "";
@@ -47,7 +55,6 @@
     width: 14px;
     height: 14px;
     float: left;
-    margin-right: 5px;
   }
 
   .markdown::before {
@@ -58,7 +65,6 @@
     width: 14px;
     height: 14px;
     float: left;
-    margin-right: 5px;
   }
 
   .javascript::before {
@@ -69,7 +75,6 @@
     width: 14px;
     height: 14px;
     float: left;
-    margin-right: 5px;
   }
 
   .folder-arrow {

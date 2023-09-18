@@ -15,26 +15,26 @@ const Wrapper = ({ children }: any) => {
 
 const Item = ({ fileName, minimized, children }: Item) => {
   const [visible, setVisible] = useState(!minimized);
-  let style = "";
+  let style = "item ";
   if (fileName.toLowerCase().indexOf(".ts") !== -1) {
-    style = "typescript";
+    style += "typescript";
   } else if (
     fileName.toLowerCase().indexOf(".scss") !== -1 ||
     fileName.toLowerCase().indexOf(".sass") !== -1
   ) {
-    style = "sass";
+    style += "sass";
   } else if (fileName.toLowerCase().indexOf(".js") !== -1) {
-    style = "javascript";
+    style += "javascript";
   } else if (fileName.toLowerCase().indexOf(".json") !== -1) {
-    style = "json";
+    style +="json";
   } else if (fileName.toLowerCase().indexOf(".md") !== -1) {
-    style = "markdown";
+    style +="markdown";
   } else {
-    style = "folder";
+    style += "folder";
   }
   return (
     <li>
-      {style === "folder" ? (
+      {style.indexOf('folder') !== -1 ? (
         visible ? (
           <span className="folder-arrow down">{">"}</span>
         ) : (

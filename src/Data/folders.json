@@ -11,7 +11,7 @@
         {
           "id": "2",
           "fileName": "Components",
-          "minimized": false,
+          "minimized": true,
           "children": [
             {
               "id": "3",
@@ -30,7 +30,7 @@
         {
           "id": "6",
           "fileName": "Pages",
-          "minimized": false,
+          "minimized": true,
           "children": [
             {
               "id": "7",
