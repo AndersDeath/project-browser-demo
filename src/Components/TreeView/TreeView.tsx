@@ -13,7 +13,7 @@ const Wrapper = ({ children }: any) => {
   return <ul>{children}</ul>;
 };
 
-const Item = ({ fileName, minimized, children }: Item) => {
+const Item = ({ id, fileName, minimized, children }: Item) => {
   const [visible, setVisible] = useState(!minimized);
   let style = "item ";
   if (fileName.toLowerCase().indexOf(".ts") !== -1) {
@@ -46,6 +46,7 @@ const Item = ({ fileName, minimized, children }: Item) => {
       <span
         className={style}
         onClick={() => {
+          console.log(fileName, id);
           if (children) {
             setVisible(!visible);
           }
@@ -67,7 +68,7 @@ const Item = ({ fileName, minimized, children }: Item) => {
 export default function TreeView() {
   return (
     <div className="TreeView">
-      <Wrapper>
+      <Wrapper minimized={data.minimized}>
         <Item key={data.id} {...data} />
       </Wrapper>
     </div>
