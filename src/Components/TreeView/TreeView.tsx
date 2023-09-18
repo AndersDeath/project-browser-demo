@@ -16,10 +16,19 @@ const Wrapper = ({ children }: any) => {
 const Item = ({ fileName, minimized, children }: Item) => {
   const [visible, setVisible] = useState(!minimized);
   let style = "";
-  if (fileName.indexOf(".server.ts") !== -1) {
-    style = "server";
-  } else if (fileName.indexOf(".client.ts") !== -1) {
-    style = "client";
+  if (fileName.toLowerCase().indexOf(".ts") !== -1) {
+    style = "typescript";
+  } else if (
+    fileName.toLowerCase().indexOf(".scss") !== -1 ||
+    fileName.toLowerCase().indexOf(".sass") !== -1
+  ) {
+    style = "sass";
+  } else if (fileName.toLowerCase().indexOf(".js") !== -1) {
+    style = "javascript";
+  } else if (fileName.toLowerCase().indexOf(".json") !== -1) {
+    style = "json";
+  } else if (fileName.toLowerCase().indexOf(".md") !== -1) {
+    style = "markdown";
   } else {
     style = "folder";
   }

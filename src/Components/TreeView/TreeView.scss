@@ -1,25 +1,74 @@
 .TreeView {
-    background: #111;
-    color: #eee;
+  background: #111;
+  color: #eee;
 
-    min-width: 230px;
-    border-right: 1px solid #ccc;
-  
-    ul {
-      padding-left: 15px;
-    }
-    li {
-      list-style: none;
-      cursor: pointer;
-    }
-    .folder {
-      text-decoration: underline;
-    }
-    .client {
-      color: lightcyan;
-    }
-    .server {
-      color: #cfc;
-    }
+  min-width: 230px;
+  border-right: 1px solid #ccc;
+
+  ul {
+    padding-left: 15px;
+    color: lightcyan;
   }
-  
+  li {
+    list-style: none;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 4px 0 4px 0;
+  }
+  .folder {
+    text-decoration: underline;
+  }
+  .typescript::before {
+    content: "";
+    display: block;
+    background: url("../../Assets/icons/typescript.svg") no-repeat;
+    background-size: contain;
+    width: 14px;
+    height: 14px;
+    float: left;
+    margin-right: 5px;
+  }
+
+  .sass::before {
+    content: "";
+    display: block;
+    background: url("../../Assets/icons/sass.svg") no-repeat;
+    background-size: contain;
+    width: 14px;
+    height: 14px;
+    float: left;
+    margin-right: 5px;
+  }
+  .json::before {
+    content: "";
+    display: block;
+    background: url("../../Assets/icons/json.svg") no-repeat;
+    background-size: contain;
+    width: 14px;
+    height: 14px;
+    float: left;
+    margin-right: 5px;
+  }
+
+  .markdown::before {
+    content: "";
+    display: block;
+    background: url("../../Assets/icons/markdown.svg") no-repeat;
+    background-size: contain;
+    width: 14px;
+    height: 14px;
+    float: left;
+    margin-right: 5px;
+  }
+
+  .javascript::before {
+    content: "";
+    display: block;
+    background: url("../../Assets/icons/javascript.svg") no-repeat;
+    background-size: contain;
+    width: 14px;
+    height: 14px;
+    float: left;
+    margin-right: 5px;
+  }
+}
