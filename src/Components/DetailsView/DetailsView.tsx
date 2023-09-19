@@ -7,7 +7,7 @@ export default function DetailsView() {
   const { file } = useFileContext();
   return (
     <div className="DetailsView">
-      {file && <CodeView language={extToString(file.title)}>{file.content}</CodeView> }
+      {file && <><div className="DetailsView__fileInfo">{file.title}</div><CodeView language={extToString(file.title)}>{file.content}</CodeView></> }
     </div>
   );
 }

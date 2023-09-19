@@ -1,8 +1,8 @@
-import { useContext, useState } from "react";
+import { useState } from "react";
 import "./TreeView.scss";
 import data from "../../Data/folders.json";
 import { FilesData, files } from "../../Data/files";
-import { FileContext, useFileContext } from "../../FileContext";
+import { useFileContext } from "../../FileContext";
 import { extToString } from "../../Utils/ext";
 
 const Files = new FilesData(files);
@@ -14,13 +14,9 @@ interface Item {
   minimized?: boolean;
 }
 
-const Wrapper = ({ children }: any) => {
-  return <ul>{children}</ul>;
-};
-
 const Item = ({ id, fileName, minimized, children }: Item) => {
   const [visible, setVisible] = useState(!minimized);
-  const { file, setFile } = useFileContext();
+  const { setFile } = useFileContext();
 
   let style = `item ${extToString(fileName)}`;
 
@@ -51,11 +47,11 @@ const Item = ({ id, fileName, minimized, children }: Item) => {
         {fileName}
       </span>
       {children && visible && (
-        <Wrapper>
+        <ul>
           {children.map((el: any) => {
             return <Item key={el.id} {...el} />;
           })}
-        </Wrapper>
+        </ul>
       )}
     </li>
   );
@@ -64,9 +60,9 @@ const Item = ({ id, fileName, minimized, children }: Item) => {
 export default function TreeView() {
   return (
     <div className="TreeView">
-      <Wrapper minimized={data.minimized}>
+      <ul>
         <Item key={data.id} {...data} />
-      </Wrapper>
+      </ul>
     </div>
   );
 }
