@@ -7,7 +7,7 @@ export default function DetailsView() {
   return (
     <div className="DetailsView">
       <h1>Details</h1>
-      {file && <div>{file.content}</div> }
+      {file && <div className="view-area"><pre>{file.content}</pre></div> }
     </div>
   );
 }
