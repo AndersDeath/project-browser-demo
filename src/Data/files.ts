@@ -1,5 +1,8 @@
+import { IItem } from "../Components/TreeView/TreeView";
+import data from "./folders.json";
 export class FilesData {
   private files: any[] = [];
+  public structure = data;
   constructor(files: any[]) {
     this.files = files;
   }
@@ -10,6 +13,23 @@ export class FilesData {
         return e.id === id;
       })[0] || false
     );
+  }
+
+  findNodeAndParents(root: IItem, targetId: string): IItem[] | null {
+    if (root.id === targetId) {
+      return [root];
+    }
+
+    if (root.children) {
+      for (const child of root.children) {
+        const result = this.findNodeAndParents(child, targetId);
+        if (result) {
+          return [root, ...result];
+        }
+      }
+    }
+
+    return null;
   }
 }
 

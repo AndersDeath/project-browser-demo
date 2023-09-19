@@ -1,20 +1,19 @@
 import { useState } from "react";
 import "./TreeView.scss";
-import data from "../../Data/folders.json";
 import { FilesData, files } from "../../Data/files";
 import { useFileContext } from "../../FileContext";
 import { extToString } from "../../Utils/ext";
 
 const Files = new FilesData(files);
 
-interface Item {
+export interface IItem {
   id: string;
   fileName: string;
   children: any[];
   minimized?: boolean;
 }
 
-const Item = ({ id, fileName, minimized, children }: Item) => {
+const Item = ({ id, fileName, minimized, children }: IItem) => {
   const [visible, setVisible] = useState(!minimized);
   const { setFile } = useFileContext();
 
@@ -61,7 +60,7 @@ export default function TreeView() {
   return (
     <div className="TreeView">
       <ul>
-        <Item key={data.id} {...data} />
+        <Item key={Files.structure.id} {...Files.structure} />
       </ul>
     </div>
   );
