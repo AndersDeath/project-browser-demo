@@ -1,10 +1,9 @@
-import { useState } from "react";
 import "./App.scss";
 
 import TreeView from "../TreeView/TreeView";
 import DetailsView from "../DetailsView/DetailsView";
 import Header from "../Header/Header";
-import { FileContextType, FileProvider } from "../../FileContext";
+import { FileProvider } from "../../FileContext";
 
 export default function App() {
   return (

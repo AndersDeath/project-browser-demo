@@ -156,4 +156,61 @@ test('renders learn react link', () => {
 });
 `,
   },
+  {
+    title: "App.tsx",
+    id: "3",
+    content: `import "./App.scss";
+
+import TreeView from "../TreeView/TreeView";
+import DetailsView from "../DetailsView/DetailsView";
+import Header from "../Header/Header";
+import { FileProvider } from "../../FileContext";
+
+export default function App() {
+  return (
+    <div className="App">
+      <Header />
+      <div className="Content">
+        <FileProvider>
+          <TreeView />
+          <DetailsView />
+        </FileProvider>
+      </div>
+    </div>
+  );
+}
+`,
+  },
+  {
+    title: "App.scss",
+    id: "5",
+    content: `.App {
+  width: 100%;
+  height: 100%;
+}
+.Content {
+  display: flex;
+  flex-direction: row;
+  height: calc(100% - 51px);
+}
+`,
+  },
+  {
+    title: "Main.page.scss",
+    id: "8",
+    content: `// here should be styles for Main Page`,
+  },
+  {
+    title: "Main.page.tsx",
+    id: "7",
+    content: `"use client";
+export default function Main() {
+  return (
+    <>
+      <h1>Main page</h1>
+    </>
+  );
+}
+`,
+  },
 ];
