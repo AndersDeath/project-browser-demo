@@ -59,7 +59,7 @@ export default function TreeView() {
 
   useEffect(() => {
     setFile(Files.get("13"));
-  });
+  },[setFile]);
 
   return (
     <div className="TreeView">
