@@ -3,6 +3,7 @@ import "./TreeView.scss";
 import data from "../../Data/folders.json";
 import { FilesData, files } from "../../Data/files";
 import { FileContext, useFileContext } from "../../FileContext";
+import { extToString } from "../../Utils/ext";
 
 const Files = new FilesData(files);
 
@@ -21,23 +22,8 @@ const Item = ({ id, fileName, minimized, children }: Item) => {
   const [visible, setVisible] = useState(!minimized);
   const { file, setFile } = useFileContext();
 
-  let style = "item ";
-  if (fileName.toLowerCase().indexOf(".ts") !== -1) {
-    style += "typescript";
-  } else if (
-    fileName.toLowerCase().indexOf(".scss") !== -1 ||
-    fileName.toLowerCase().indexOf(".sass") !== -1
-  ) {
-    style += "sass";
-  } else if (fileName.toLowerCase().indexOf(".js") !== -1) {
-    style += "javascript";
-  } else if (fileName.toLowerCase().indexOf(".json") !== -1) {
-    style += "json";
-  } else if (fileName.toLowerCase().indexOf(".md") !== -1) {
-    style += "markdown";
-  } else {
-    style += "folder";
-  }
+  let style = `item ${extToString(fileName)}`;
+
   return (
     <li>
       {style.indexOf("folder") !== -1 ? (
