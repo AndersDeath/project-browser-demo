@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./TreeView.scss";
 import { FilesData, files } from "../../Data/files";
 import { useFileContext } from "../../FileContext";
@@ -16,7 +16,6 @@ export interface IItem {
 const Item = ({ id, fileName, minimized, children }: IItem) => {
   const [visible, setVisible] = useState(!minimized);
   const { setFile } = useFileContext();
-
   let style = `item ${extToString(fileName)}`;
 
   return (
@@ -33,7 +32,6 @@ const Item = ({ id, fileName, minimized, children }: IItem) => {
       <span
         className={style}
         onClick={() => {
-          console.log(Files.get(id));
           const file = Files.get(id);
           if (file) {
             setFile(file);
@@ -57,6 +55,12 @@ const Item = ({ id, fileName, minimized, children }: IItem) => {
 };
 
 export default function TreeView() {
+  const { setFile } = useFileContext();
+
+  useEffect(() => {
+    setFile(Files.get("13"));
+  });
+
   return (
     <div className="TreeView">
       <ul>
