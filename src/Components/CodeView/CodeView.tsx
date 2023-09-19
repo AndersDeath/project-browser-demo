@@ -3,7 +3,7 @@ import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 export const CodeView = ({ language, children }: any) => {
   return (
-    <SyntaxHighlighter language={language} style={oneDark}>
+    <SyntaxHighlighter wrapLongLines language={language} style={oneDark}>
       {children}
     </SyntaxHighlighter>
   );
