@@ -1,13 +1,13 @@
 import { useFileContext } from "../../FileContext";
+import { CodeView } from "../CodeView/CodeView";
 import "./DetailsView.scss";
 
 export default function DetailsView() {
-  const { file, setFile } = useFileContext();
+  const { file } = useFileContext();
 
   return (
     <div className="DetailsView">
-      <h1>Details</h1>
-      {file && <div className="view-area"><pre>{file.content}</pre></div> }
+      {file && <CodeView language="typescript">{file.content}</CodeView> }
     </div>
   );
 }

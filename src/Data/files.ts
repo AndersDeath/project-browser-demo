@@ -17,7 +17,7 @@ export const files = [
   {
     title: "index.tsx",
     id: "9",
-    content: `import React from 'react';
+    content: `        import React from 'react';
         import ReactDOM from 'react-dom/client';
         import './index.scss';
         import App from './Components/App/App';
