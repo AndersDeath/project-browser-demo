@@ -10,11 +10,11 @@ export default function DetailsView() {
   const filesData = new FilesData(files);
   let fileText = file?.title;
   if (file) {
-    fileText = filesData
+    fileText = './' + filesData
       .findNodeAndParents(filesData.structure, file.id)
       ?.map((item: IItem) => {
         return item.fileName;
-      })
+      }).slice(1)
       .join("/");
   }
   return (
