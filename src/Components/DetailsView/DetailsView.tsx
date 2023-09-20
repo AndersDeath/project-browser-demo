@@ -1,9 +1,9 @@
-import { FilesData, files } from "../../Data/files";
-import { IItem } from "../../Data/interfaces";
-import { useFileContext } from "../../FileContext";
-import { extToString } from "../../Utils/ext";
-import { CodeView } from "../CodeView/CodeView";
-import "./DetailsView.scss";
+import { FilesData, files } from '../../Data/files';
+import { IItem } from '../../Data/interfaces';
+import { useFileContext } from '../../FileContext';
+import { extToString } from '../../Utils/ext';
+import { CodeView } from '../CodeView/CodeView';
+import './DetailsView.scss';
 
 export default function DetailsView() {
   const { file } = useFileContext();
@@ -15,7 +15,7 @@ export default function DetailsView() {
       ?.map((item: IItem) => {
         return item.fileName;
       }).slice(1)
-      .join("/");
+      .join('/');
   }
   return (
     <div className="DetailsView">

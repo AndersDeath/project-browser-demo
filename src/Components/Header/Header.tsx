@@ -1,4 +1,4 @@
-import "./Header.scss";
+import './Header.scss';
 
 export default function DetailsView() {
   return (

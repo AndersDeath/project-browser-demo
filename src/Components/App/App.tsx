@@ -1,9 +1,9 @@
-import "./App.scss";
+import './App.scss';
 
-import TreeView from "../TreeView/TreeView";
-import DetailsView from "../DetailsView/DetailsView";
-import Header from "../Header/Header";
-import { FileProvider } from "../../FileContext";
+import TreeView from '../TreeView/TreeView';
+import DetailsView from '../DetailsView/DetailsView';
+import Header from '../Header/Header';
+import { FileProvider } from '../../FileContext';
 
 export default function App() {
   return (

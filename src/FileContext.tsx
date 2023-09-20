@@ -1,4 +1,4 @@
-import { ReactNode, createContext, useContext, useState } from "react";
+import { ReactNode, createContext, useContext, useState } from 'react';
 
 export interface FileBody {
   id: string;
@@ -21,7 +21,7 @@ interface FileProviderProps {
 export const useFileContext = () => {
   const context = useContext(FileContext);
   if (!context) {
-    throw new Error("userFileContext must be used within a UserProvider");
+    throw new Error('userFileContext must be used within a UserProvider');
   }
   return context;
 };

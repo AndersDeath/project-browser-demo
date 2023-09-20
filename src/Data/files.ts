@@ -1,5 +1,5 @@
-import data from "./folders.json";
-import { IItem } from "./interfaces";
+import data from './folders.json';
+import { IItem } from './interfaces';
 export class FilesData {
   private files: any[] = [];
   public structure = data;
@@ -35,8 +35,8 @@ export class FilesData {
 
 export const files = [
   {
-    title: "index.tsx",
-    id: "9",
+    title: 'index.tsx',
+    id: '9',
     content: `import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.scss';
@@ -59,8 +59,8 @@ reportWebVitals();
     `,
   },
   {
-    title: "README.MD",
-    id: "12",
+    title: 'README.MD',
+    id: '12',
     content: `# Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -110,8 +110,8 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 `,
   },
   {
-    title: "package.json",
-    id: "11",
+    title: 'package.json',
+    id: '11',
     content: `{
   "name": "tree-folder",
   "version": "0.1.0",
@@ -163,8 +163,8 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 `,
   },
   {
-    title: "test.js",
-    id: "10",
+    title: 'test.js',
+    id: '10',
     content: `import React from 'react';
 import { render, screen } from '@testing-library/react';
 import App from './App';
@@ -177,8 +177,8 @@ test('renders learn react link', () => {
 `,
   },
   {
-    title: "App.tsx",
-    id: "3",
+    title: 'App.tsx',
+    id: '3',
     content: `import "./App.scss";
 
 import TreeView from "../TreeView/TreeView";
@@ -202,8 +202,8 @@ export default function App() {
 `,
   },
   {
-    title: "App.scss",
-    id: "5",
+    title: 'App.scss',
+    id: '5',
     content: `.App {
   width: 100%;
   height: 100%;
@@ -216,13 +216,13 @@ export default function App() {
 `,
   },
   {
-    title: "Main.page.scss",
-    id: "8",
-    content: `// here should be styles for Main Page`,
+    title: 'Main.page.scss',
+    id: '8',
+    content: '// here should be styles for Main Page',
   },
   {
-    title: "Main.page.tsx",
-    id: "7",
+    title: 'Main.page.tsx',
+    id: '7',
     content: `"use client";
 export default function Main() {
   return (
@@ -234,8 +234,8 @@ export default function Main() {
 `,
   },
   {
-    title: "ABOUT.MD",
-    id: "13",
+    title: 'ABOUT.MD',
+    id: '13',
     content: `# About
 `,
   },
