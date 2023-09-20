@@ -4,6 +4,8 @@
 
 Welcome to the Project Browser Demo! This web application provides a user-friendly interface for browsing and exploring project files and folders. It offers a convenient way to view file details, contents, and folder structures.
 
+#### [Online Demo](https://andersdeath.github.io/project-browser-demo/)
+
 ## How to Run
 
 To run the Project Browser Demo on your local machine, follow these steps:
