@@ -7,9 +7,9 @@ import { FileProvider } from '../../FileContext';
 
 export default function App() {
   return (
-    <div className="App">
+    <div className='App'>
       <Header />
-      <div className="Content">
+      <div className='Content'>
         <FileProvider>
           <TreeView />
           <DetailsView />

@@ -1,16 +1,16 @@
-import { useEffect, useState } from 'react'
-import './TreeView.scss'
-import { FilesData, files } from '../../Data/files'
-import { useFileContext } from '../../FileContext'
-import { extToString } from '../../Utils/ext'
-import { IItem } from '../../Data/interfaces'
+import { useEffect, useState } from 'react';
+import './TreeView.scss';
+import { FilesData, files } from '../../Data/files';
+import { useFileContext } from '../../FileContext';
+import { extToString } from '../../Utils/ext';
+import { IItem } from '../../Data/interfaces';
 
-const Files = new FilesData(files)
+const Files = new FilesData(files);
 
 const Item = ({ id, fileName, minimized, children }: IItem) => {
-  const [visible, setVisible] = useState(!minimized)
-  const { setFile } = useFileContext()
-  const style = `item ${extToString(fileName)}`
+  const [visible, setVisible] = useState(!minimized);
+  const { setFile } = useFileContext();
+  const style = `item ${extToString(fileName)}`;
 
   return (
     <li>
@@ -26,12 +26,12 @@ const Item = ({ id, fileName, minimized, children }: IItem) => {
       <span
         className={style}
         onClick={() => {
-          const file = Files.get(id)
+          const file = Files.get(id);
           if (file) {
-            setFile(file)
+            setFile(file);
           }
           if (children) {
-            setVisible(!visible)
+            setVisible(!visible);
           }
         }}
       >
@@ -40,20 +40,20 @@ const Item = ({ id, fileName, minimized, children }: IItem) => {
       {children && visible && (
         <ul>
           {children.map((el: IItem) => {
-            return <Item key={el.id} {...el} />
+            return <Item key={el.id} {...el} />;
           })}
         </ul>
       )}
     </li>
-  )
-}
+  );
+};
 
 export default function TreeView() {
-  const { setFile } = useFileContext()
+  const { setFile } = useFileContext();
 
   useEffect(() => {
-    setFile(Files.get('13'))
-  }, [setFile])
+    setFile(Files.get('13'));
+  }, [setFile]);
 
   return (
     <div className='TreeView'>
@@ -61,5 +61,5 @@ export default function TreeView() {
         <Item key={Files.structure.id} {...Files.structure} />
       </ul>
     </div>
-  )
+  );
 }

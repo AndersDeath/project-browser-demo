@@ -1,35 +1,35 @@
-import data from './folders.json'
-import { FileBody, IItem } from './interfaces'
+import data from './folders.json';
+import { FileBody, IItem } from './interfaces';
 export class FilesData {
-  private files: FileBody[] = []
-  public structure = data
+  private files: FileBody[] = [];
+  public structure = data;
   constructor(files: FileBody[]) {
-    this.files = files
+    this.files = files;
   }
 
   get(id: string) {
     return (
       this.files.filter((e) => {
-        return e.id === id
+        return e.id === id;
       })[0] || false
-    )
+    );
   }
 
   findNodeAndParents(root: IItem, targetId: string): IItem[] | null {
     if (root.id === targetId) {
-      return [root]
+      return [root];
     }
 
     if (root.children) {
       for (const child of root.children) {
-        const result = this.findNodeAndParents(child, targetId)
+        const result = this.findNodeAndParents(child, targetId);
         if (result) {
-          return [root, ...result]
+          return [root, ...result];
         }
       }
     }
 
-    return null
+    return null;
   }
 }
 
@@ -239,4 +239,4 @@ export default function Main() {
     content: `# About
 `,
   },
-]
+];
