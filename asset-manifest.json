@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/project-browser-demo/static/css/main.74cdf5ca.css",
+    "main.js": "/project-browser-demo/static/js/main.563a46b9.js",
+    "static/js/787.f29d6f2b.chunk.js": "/project-browser-demo/static/js/787.f29d6f2b.chunk.js",
+    "static/media/sass.svg": "/project-browser-demo/static/media/sass.3eb461889f6a2271b648.svg",
+    "static/media/javascript.svg": "/project-browser-demo/static/media/javascript.b647fcdfbb2b4a6c5d61.svg",
+    "index.html": "/project-browser-demo/index.html",
+    "static/media/typescript.svg": "/project-browser-demo/static/media/typescript.f20748caf2dac55710dd.svg",
+    "static/media/json.svg": "/project-browser-demo/static/media/json.3e93d8ac0bdf116e320d.svg",
+    "static/media/markdown.svg": "/project-browser-demo/static/media/markdown.c13412733ddfe9a2a59d.svg",
+    "main.74cdf5ca.css.map": "/project-browser-demo/static/css/main.74cdf5ca.css.map",
+    "main.563a46b9.js.map": "/project-browser-demo/static/js/main.563a46b9.js.map",
+    "787.f29d6f2b.chunk.js.map": "/project-browser-demo/static/js/787.f29d6f2b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.74cdf5ca.css",
+    "static/js/main.563a46b9.js"
+  ]
+}
