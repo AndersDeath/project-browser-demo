@@ -237,6 +237,18 @@ export default function Main() {
     title: 'ABOUT.MD',
     id: '13',
     content: `# About
+
+This project is a simple demo implementation of Project browser.
+
+## Functionality
+
+- Folders' tree view
+- Displaying file's content
+- Syntax highlighting
+
+## How to use
+
+Click on folders and files in the left side of screen
 `,
   },
 ];
