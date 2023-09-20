@@ -3,15 +3,10 @@ import "./TreeView.scss";
 import { FilesData, files } from "../../Data/files";
 import { useFileContext } from "../../FileContext";
 import { extToString } from "../../Utils/ext";
+import { IItem } from "../../Data/interfaces";
 
 const Files = new FilesData(files);
 
-export interface IItem {
-  id: string;
-  fileName: string;
-  children: any[];
-  minimized?: boolean;
-}
 
 const Item = ({ id, fileName, minimized, children }: IItem) => {
   const [visible, setVisible] = useState(!minimized);

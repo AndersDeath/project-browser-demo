@@ -1,8 +1,8 @@
 import { FilesData, files } from "../../Data/files";
+import { IItem } from "../../Data/interfaces";
 import { useFileContext } from "../../FileContext";
 import { extToString } from "../../Utils/ext";
 import { CodeView } from "../CodeView/CodeView";
-import { IItem } from "../TreeView/TreeView";
 import "./DetailsView.scss";
 
 export default function DetailsView() {

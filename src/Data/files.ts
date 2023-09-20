@@ -1,5 +1,5 @@
-import { IItem } from "../Components/TreeView/TreeView";
 import data from "./folders.json";
+import { IItem } from "./interfaces";
 export class FilesData {
   private files: any[] = [];
   public structure = data;
