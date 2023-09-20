@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import './TreeView.scss';
 import { useFileContext } from '../../FileContext';
 import { extToString } from '../../Utils/ext';
 import { IItem } from '../../Data/interfaces';
