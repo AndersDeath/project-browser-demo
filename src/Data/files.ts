@@ -113,7 +113,7 @@ To learn React, check out the [React documentation](https://reactjs.org/).
     title: 'package.json',
     id: '11',
     content: `{
-  "name": "tree-folder",
+  "name": "Some project",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
