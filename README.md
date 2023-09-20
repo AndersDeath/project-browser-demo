@@ -1,46 +1,59 @@
-# Getting Started with Create React App
+# Project Browser Demo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+Welcome to the Project Browser Demo! This web application provides a user-friendly interface for browsing and exploring project files and folders. It offers a convenient way to view file details, contents, and folder structures.
 
-In the project directory, you can run:
+## How to Run
 
-### `npm start`
+To run the Project Browser Demo on your local machine, follow these steps:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. Ensure you have Node.js and npm (Node Package Manager) installed on your computer.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+2. Clone this project's repository to your local machine using a Git client or by downloading the ZIP archive.
 
-### `npm test`
+3. Open your terminal or command prompt and navigate to the project's root directory.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4. Install project dependencies by running the following command:
 
-### `npm run build`
+   ```shell
+   npm install
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+5. After the installation is complete, start the development server with the following command:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```shell
+   npm start
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+6. The application will be launched in your default web browser, and you can interact with it to explore the project files and folders.
 
-### `npm run eject`
+## Features
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+The Project Browser Demo offers the following features:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Folder and File Navigation**: Easily navigate through folders and view their contents.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- **File Details**: See details about selected files, including their paths and names.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- **Syntax Highlighting**: Code files are displayed with syntax highlighting for improved readability.
 
-## Learn More
+## Project Structure
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The codebase is organized into several key components:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **Components**: This directory contains the main components used in the application.
+
+- **Data**: Here, you'll find data files and interfaces used to structure and manage file data.
+
+- **Utils**: Utility functions, such as `extToString`, are located here.
+
+- **Styles**: SCSS files for styling components are stored in this directory.
+
+- **Public**: This directory contains static assets and the `index.html` file.
+
+Please refer to the code comments and documentation within the source files for more detailed information about specific functions or components.
+
+## About
+
+This Project Browser Demo is a simple showcase of a project browser interface. It allows users to explore and interact with project files and folders in a user-friendly manner.
